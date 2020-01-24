@@ -1,0 +1,14 @@
+Enumeration :
+
+discover name servers @@ host -t ns domain.com
+discover mail servers @@ host -t mx domain.com
+
+Reverse Lookup :
+
+for ip in $(seq X Y); do host X.X.X.$ip; done | grep -v "not found"
+
+Zone Transfer :
+
+host -l domain.com [ns1].domain.com
+
+

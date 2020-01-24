@@ -1,0 +1,40 @@
+Network Sweeping
+nmap -sn X.X.X.X-Y
+
+Full TCP
+nmap -p 1-65535 -sV X.X.X.X // nmap -p- -sV X.X.X.X
+
+
+-A (OS and Version Detection, Script scanning, traceroute)
+nmap -A X.X.X.X
+
+
+NSE SCRIPTS:
+
+--script=[script file].nse 
+
+cd to /usr/share/nmap/scripts, and ls to list scripts available.
+
+
+Evading Detection:
+
+MTU:
+nmap --mtu 8/16/32 X.X.X.X
+packets will be limited to maximum byte size chosen
+
+Decoy:
+nmap -D RND:10 X.X.X.X 
+generate random decoys
+
+nmap -D A.A.A.A,B.B.B.B,C.C.C.C X.X.X.X
+manually choose decoy IP's
+
+Source Port:
+nmap --source-port 53 X.X.X.X (port 53 has to be opened for instance...)
+scan through the specified port
+
+Random Data:
+nmap --data-length X X.X.X.X
+
+Random Order:
+nmap --randomize-hosts X.X.X.X-Y
