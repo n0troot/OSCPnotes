@@ -13,7 +13,7 @@ Kernel
 search for 'uac' in metasploit, always set technique to PSH(powershell).
 
 4. look for Unquoted Paths -> 
-wmic service get name,pathname,displayname,startmode | findstr /i auto | findstr /i /v "C:\Windows\\" | findstr /i /v """
+wmic service get name,pathname,displayname,startmode | findstr /i "auto" | findstr /i /v "C:\Windows\\" | findstr /i /v """
 
 if found, go through directories and list permissions with icacls on each dir.
 Insert payload(and set to windows/shell_reverse_tcp) and BAM.
